@@ -17,7 +17,7 @@ class GbsuFtbLaiService {
             conversionBuilder.append(getConversionValueByCharNumber(c))
         }
         if(conversionBuilder.isEmpty())
-            return "1"
+            return inputNumber.toString()
         return conversionBuilder.toString()
 
     }
