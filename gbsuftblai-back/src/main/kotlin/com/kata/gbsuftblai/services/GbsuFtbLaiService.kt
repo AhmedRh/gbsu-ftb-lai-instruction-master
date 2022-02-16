@@ -7,10 +7,10 @@ class GbsuFtbLaiService {
 
     fun convertNumber(inputNumber: Int): String {
         var conversionBuilder = StringBuilder()
-        if(inputNumber % 3 == 0) {
+        if(isDivisibleBy(inputNumber, 3)) {
             conversionBuilder.append("Gbsu")
         }
-        if(inputNumber.toString().contains('3')) {
+        if(isContainingByNumberChar(inputNumber, '3')) {
             conversionBuilder.append("Gbsu")
         }
         if(conversionBuilder.isEmpty())
@@ -18,5 +18,9 @@ class GbsuFtbLaiService {
         return conversionBuilder.toString()
 
     }
+
+    private fun isContainingByNumberChar(inputNumber: Int, divider: Char) = inputNumber.toString().contains(divider)
+
+    private fun isDivisibleBy(inputNumber: Int, divider: Int) = inputNumber % divider == 0
 
 }
