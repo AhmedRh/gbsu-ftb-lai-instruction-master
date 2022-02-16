@@ -19,6 +19,9 @@ class GbsuFtbLaiService {
         if(isContainingByNumberChar(inputNumber, '5')) {
             conversionBuilder.append("Ftb")
         }
+        if(isContainingByNumberChar(inputNumber, '7')) {
+            conversionBuilder.append("Lai")
+        }
         if(conversionBuilder.isEmpty())
             return "1"
         return conversionBuilder.toString()
