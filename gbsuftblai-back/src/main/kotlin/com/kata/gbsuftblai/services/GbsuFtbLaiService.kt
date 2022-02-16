@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component
 class GbsuFtbLaiService {
 
     fun convertNumber(inputNumber: Int): String {
-        return ""
+        return "1"
     }
 
 }
