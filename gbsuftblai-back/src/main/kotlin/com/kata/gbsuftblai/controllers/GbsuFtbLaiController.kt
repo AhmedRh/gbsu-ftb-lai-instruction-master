@@ -11,9 +11,9 @@ class GbsuFtbLaiController(private val gbsuFtbLaiService: GbsuFtbLaiService) {
     @GetMapping("/{inputNumber}", produces = [MediaType.APPLICATION_JSON_VALUE])
     @CrossOrigin(origins = ["http://localhost:8080", "http://localhost:4200"])
     fun convertNumber(@PathVariable(name = "inputNumber") inputNumber: Int): ResultDto {
-        return ResultDto(gbsuFtbLaiService.convertNumber(inputNumber))
+        return ResultDto(inputNumber, gbsuFtbLaiService.convertNumber(inputNumber))
     }
 
-    data class ResultDto(val result: String)
+    data class ResultDto(val numberToConvert: Int, val result: String)
 
 }
