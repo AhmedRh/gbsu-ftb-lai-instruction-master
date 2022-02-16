@@ -14,13 +14,7 @@ class GbsuFtbLaiService {
             conversionBuilder.append("Ftb")
         }
         inputNumber.toString().forEach { c ->
-            if( c== '3') {
-                conversionBuilder.append("Gbsu")
-            } else if(c == '5') {
-                conversionBuilder.append("Ftb")
-            } else if( c == '7') {
-                conversionBuilder.append("Lai")
-            }
+            conversionBuilder.append(getConversionValueByCharNumber(c))
         }
         if(conversionBuilder.isEmpty())
             return "1"
@@ -28,7 +22,18 @@ class GbsuFtbLaiService {
 
     }
 
-    private fun isContainingByNumberChar(inputNumber: Int, divider: Char) = inputNumber.toString().contains(divider)
+    private fun getConversionValueByCharNumber(c: Char): String {
+        if (c == '3') {
+           return "Gbsu"
+        }
+        if (c == '5') {
+            return "Ftb"
+        }
+        if (c == '7') {
+            return "Lai"
+        }
+        return ""
+    }
 
     private fun isDivisibleBy(inputNumber: Int, divider: Int) = inputNumber % divider == 0
 
