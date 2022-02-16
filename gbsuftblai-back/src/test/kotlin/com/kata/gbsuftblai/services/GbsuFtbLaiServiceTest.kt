@@ -33,4 +33,10 @@ class GbsuFtbLaiServiceTest {
         assertEquals("Lai", gbsuFtbLaiService.convertNumber(7))
     }
 
+    @Test
+    fun shouldReturnGbsuIfInputNumberIs9() {
+        assertEquals("Gbsu", gbsuFtbLaiService.convertNumber(9))
+    }
+
+
 }
