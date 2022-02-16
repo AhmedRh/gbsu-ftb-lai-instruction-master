@@ -1,8 +1,9 @@
 <div class="container">
+  <h2>Gbsu Ftb Lai</h2>
   <form [formGroup]="form" (ngSubmit)="submitNumber()">
     <div class="form-group">
       <label for="inputNumber">Number to convert</label>
-      <input name="inputNumber" type="number" formControlName="inputNumber" class="form-control">
+      <input name="inputNumber" type="number" formControlName="inputNumber" placeholder="input number" class="form-control">
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="!form.dirty || form.invalid">Convert</button>
   </form>
