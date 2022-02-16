@@ -19,6 +19,10 @@ class GbsuFtbLaiServiceTest {
     }
 
     @Test
+    fun shouldReturn2IfInputNumberIs2() {
+        assertEquals("2", gbsuFtbLaiService.convertNumber(2))
+    }
+    @Test
     fun shouldReturnGbsuGbsuIfInputNumberIs3() {
         assertEquals("GbsuGbsu", gbsuFtbLaiService.convertNumber(3))
     }
