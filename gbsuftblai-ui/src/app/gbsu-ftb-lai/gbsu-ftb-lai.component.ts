@@ -18,7 +18,9 @@ export class GbsuFtbLaiComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    if(this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   convertNumber(inputNumber: number): void {
