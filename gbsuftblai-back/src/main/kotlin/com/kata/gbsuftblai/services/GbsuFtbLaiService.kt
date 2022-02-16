@@ -13,6 +13,12 @@ class GbsuFtbLaiService {
         if(isContainingByNumberChar(inputNumber, '3')) {
             conversionBuilder.append("Gbsu")
         }
+        if(isDivisibleBy(inputNumber, 5)) {
+            conversionBuilder.append("Ftb")
+        }
+        if(isContainingByNumberChar(inputNumber, '5')) {
+            conversionBuilder.append("Ftb")
+        }
         if(conversionBuilder.isEmpty())
             return "1"
         return conversionBuilder.toString()
