@@ -8,6 +8,8 @@ import { GbsuFtbLaiService } from '../gbsu-ftb-lai.service';
 })
 export class GbsuFtbLaiComponent implements OnInit, OnDestroy {
 
+  numberConvertedResult: NumberConverted;
+
   constructor(private gbsuFtbLaiService: GbsuFtbLaiService) { }
 
   ngOnInit(): void {
@@ -17,6 +19,11 @@ export class GbsuFtbLaiComponent implements OnInit, OnDestroy {
   }
 
   convertNumber(inputNumber: number): void {
+    this.gbsuFtbLaiService.getConvertedNumber(inputNumber)
+        .subscribe(
+          (numberConvertedResult: NumberConverted) => this.numberConvertedResult = numberConvertedResult,
+          (error => console.log(error))
+        );
   }
 
 }
