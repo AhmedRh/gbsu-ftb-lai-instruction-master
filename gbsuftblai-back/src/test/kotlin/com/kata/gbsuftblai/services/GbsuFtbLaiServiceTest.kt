@@ -10,4 +10,10 @@ class GbsuFtbLaiServiceTest {
         var gbsuFtbLaiServiceTest = GbsuFtbLaiService()
         assertEquals("1",gbsuFtbLaiServiceTest.convertNumber(1))
     }
+
+    @Test
+    fun shouldReturnGbsuGbsuIfInputNumberIs3() {
+        var gbsuFtbLaiServiceTest = GbsuFtbLaiService()
+        assertEquals("GbsuGbsu",gbsuFtbLaiServiceTest.convertNumber(3))
+    }
 }
