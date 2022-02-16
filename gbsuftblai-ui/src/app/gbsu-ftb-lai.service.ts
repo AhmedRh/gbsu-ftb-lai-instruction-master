@@ -15,6 +15,4 @@ export class GbsuFtbLaiService {
     return this.httpClient.get(`http://localhost:8080/gbsu-ftb-lai/${inputNumber}`);
   }
 
-
-
 }
