@@ -48,6 +48,11 @@ class GbsuFtbLaiServiceTest {
         assertEquals("FtbGbsu", gbsuFtbLaiService.convertNumber(53))
     }
 
+    @Test
+    fun shouldReturnGbsuGbsuGbsuIfInputNumberIs33() {
+        assertEquals("GbsuGbsuGbsu", gbsuFtbLaiService.convertNumber(33))
+    }
+
 
 
 
