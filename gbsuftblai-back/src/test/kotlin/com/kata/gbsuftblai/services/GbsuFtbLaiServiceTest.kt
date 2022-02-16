@@ -22,4 +22,10 @@ class GbsuFtbLaiServiceTest {
     fun shouldReturnGbsuGbsuIfInputNumberIs3() {
         assertEquals("GbsuGbsu", gbsuFtbLaiService.convertNumber(3))
     }
+
+    @Test
+    fun shouldReturnFtbFtbIfInputNumberIs5() {
+        assertEquals("FtbFtb", gbsuFtbLaiService.convertNumber(5))
+    }
+
 }
